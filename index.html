@@ -361,7 +361,7 @@
   // ── CLIMA ─────────────────────────────────────────────────
   function fetchWeather() {
     var xhr=new XMLHttpRequest();
-    xhr.open('GET','/api/weather?lat='+LAT+'&lon='+LON,true);
+    xhr.open('GET','https://api.openweathermap.org/data/2.5/weather?lat='+LAT+'&lon='+LON+'&appid=fd1f21358eb70fa8ed8c27a68e30e100&units=metric',true);
     xhr.onreadystatechange=function(){
       if(xhr.readyState!==4) return;
       var el=document.getElementById('weather-section');
