@@ -370,10 +370,10 @@
         try{
           var d=JSON.parse(xhr.responseText);
           var h=new Date().getHours();
-          var temp=Math.round(cw.temperature);
-          var sens=Math.round(d.hourly.apparent_temperature[h]!==undefined?d.hourly.apparent_temperature[h]:temp);
-          var hum=d.hourly.relativehumidity_2m[h]!==undefined?d.hourly.relativehumidity_2m[h]:'--';
-          var wind=Math.round(cw.windspeed);
+          var temp=Math.round(d.main.temp);
+          var sens=Math.round(d.main.feels_like);
+          var hum=d.main.humidity;
+          var wind=Math.round(d.wind.speed * 3.6);
           el.innerHTML=
             '<div class="temp-wrap">'+
               '<div class="temp-ghost" style="color:'+c.segOff+'">88!</div>'+
