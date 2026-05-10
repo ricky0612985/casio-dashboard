@@ -368,7 +368,7 @@
       var c=window._colors||THEMES.green;
       if(xhr.status===200){
         try{
-          var d=JSON.parse(xhr.responseText);
+          var d=JSON.parse(xhr.responseText),cw=d.current_weather;
           var h=new Date().getHours();
           var temp=Math.round(d.main.temp);
           var sens=Math.round(d.main.feels_like);
